@@ -47,7 +47,7 @@ def saveComments(urls, output):
         click.echo(click.style(url, fg='green'))
         file.write('\n'+url + '\n\n')
         for comment in urls[url]:
-            click.echo(comment.extract())
+            click.echo(comment.extract().strip())
             file.write(comment.extract().strip() + '\n')
     return
 
